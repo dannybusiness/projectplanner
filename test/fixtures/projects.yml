@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: 
+  planning_start_date: 
+  planning_end_date: 
+  implementation_start_date: 
+  implementation_end_date: 2014-05-29
+
+two:
+  name: 
+  planning_start_date: 
+  planning_end_date: 
+  implementation_start_date: 
+  implementation_end_date: 2014-05-29
