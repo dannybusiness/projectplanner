@@ -1,2 +1,9 @@
-<h1>Projects#show</h1>
-<p>Find me in app/views/projects/show.html.erb</p>
+
+<h2><%= @project.name %></h2>
+
+<p>Planning Start Date: <%= @project.planning_start_date %></p>
+<p>Planning End Date: <%= @project.planning_end_date %></p>
+<p>Implementation Start Date: <%= @project.implementation_start_date %></p>
+<p>Implementation End Date: <%= @project.implementation_end_date %></p>
+
+<%= link_to 'edit', edit_project_path(@project) %>
