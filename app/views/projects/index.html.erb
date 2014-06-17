@@ -5,14 +5,16 @@
 <div class = 'container-fluid'>
 	<div class = 'row'>
 			<% @projects.each do |x| %>
-				<div class = 'col-lg-3'>
+				<div class = 'col-lg-3 project'>
 					<h3><%= x.name %></h3>
-					<p>Id: <%= x.id %> </p>
-					<p>Planning Start Date: <%= x.planning_start_date %> </p>
-					<p>Planning End Date: <%= x.planning_end_date %> </p>
-					<p>Implementation Start Date: <%= x.implementation_start_date %> </p>
-					<p>Implementation End Date: <%= x.implementation_end_date %> </p>
-					<button type='button' class='btn btn-danger'><%= link_to 'Details', project_path(x) %></button>	
+					<ul>
+						<li>Id: <%= x.id %></li>
+						<li>Planning Start Date: <%= x.planning_start_date %></li>
+						<li>Planning End Date: <%= x.planning_end_date %></li>
+						<li>Implementation Start Date: <%= x.implementation_start_date %></li>
+						<li>Implementation End Date: <%= x.implementation_end_date %> </li>
+					</ul>
+					<%= button_to 'Details', project_path(x), method: :get, class: 'btn btn-danger'%>
 				</div>	
 			<% end %>
 	</div>

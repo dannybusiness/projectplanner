@@ -1,8 +1,10 @@
-<%= form_for @project do |f| %>
-	<%= f.label :name, 'Project Name' %> <%= f.text_field :name%></br>
-	<%= f.label :planning_start_date, 'Planning - Start Date' %> <%= f.date_field :planning_start_date %></br>
-	<%= f.label :planning_end_date, 'Planning - End Date' %><%= f.date_field :planning_end_date %></br>
-	<%= f.label :implementation_start_date, 'Implemenation - Start Date' %> <%= f.date_field :implementation_start_date %></br>
-	<%= f.label :implementation_end_date, 'Implementation - End Date' %><%= f.date_field :implementation_end_date %></br>
-	<%= f.submit "Submit" %>
-<% end %>
+<div class='input-group' >
+	<%= form_for @project do |f| %>
+		<div class = 'form-group'><%= f.label :name, 'Project Name'%> <%= f.text_field :name, class: 'form-control'%></div></br>
+		<div class = 'form-group'><%= f.label :planning_start_date, 'Planning - Start Date' %> <%= f.date_field :planning_start_date, class: 'form-control' %></div></br>
+		<div class = 'form-group'><%= f.label :planning_end_date, 'Planning - End Date' %><%= f.date_field :planning_end_date,class: 'form-control' %></div></br>
+		<div class = 'form-group'><%= f.label :implementation_start_date, 'Implemenation - Start Date' %> <%= f.date_field :implementation_start_date, class: 'form-control' %></div></br>
+		<div class = 'form-group'><%= f.label :implementation_end_date, 'Implementation - End Date' %><%= f.date_field :implementation_end_date, class: 'form-control'%></div></br>
+		<%= f.submit "Submit", class: 'btn btn-danger' %>
+	<% end %>
+</div>
