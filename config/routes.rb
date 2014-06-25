@@ -1,8 +1,9 @@
 Projectplanner::Application.routes.draw do
   
-  get "gridview/show"
+	get 'welcome/index'
+  get 'gridview/show'
   devise_for :users
   resources :projects
 
-  root'projects#index'
+  root 'welcome#index'
 end
