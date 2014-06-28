@@ -1,2 +1,16 @@
-<h1>Welcome#show</h1>
-<p>Find me in app/views/welcome/show.html.erb</p>
+	
+<div class='container' style='margin-top: 10%;'>
+	<div class='row'>
+		<!-- <div class='col-md-1'></div> -->
+		<div class='col-md-12 jumbotron'>
+				<h1 class='text-center'>Project Planner</h1>
+				<p>Bringing visual simplicity to the process of project planning and time allocation<p>
+				<div id='session-buttons'>
+					<%= button_to 'Sign In', new_user_session_path, class: 'btn btn-danger'	 %>
+					<%= button_to 'Sign Up', new_user_registration_path, class: 'btn btn-danger' %>
+				</div>
+		</div>
+
+		<!-- <div class='col-md-1'></div> -->
+	</div>
+</div>
