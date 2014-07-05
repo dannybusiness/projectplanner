@@ -4,11 +4,14 @@
 		<!-- <div class='col-md-1'></div> -->
 		<div class='col-md-12 jumbotron'>
 				<h1 class='text-center'>Project Planner</h1>
-				<p>Bringing visual simplicity to the process of project planning and time allocation<p>
-				<div id='session-buttons'>
-					<%= button_to 'Sign In', new_user_session_path, class: 'btn btn-danger'	 %>
-					<%= button_to 'Sign Up', new_user_registration_path, class: 'btn btn-danger' %>
-				</div>
+				<p class='text-center'>Bringing visual simplicity to the process of project planning and time allocation<p>
+				<div id = 'user'>
+          <% if current_user %>
+            <%= button_to 'View Your Projects', projects_path, class:'btn btn-danger' %> | <%= button_to 'Sign Out', destroy_user_session_path, method: 'delete', class: 'btn btn-danger'%>
+          <% else %>
+            <%= button_to 'Sign In', new_user_session_path, class: 'btn btn-danger'%> | <%= button_to 'Sign Up', new_user_registration_path, class: 'btn btn-danger'%>
+          <% end -%>
+        </div>
 		</div>
 
 		<!-- <div class='col-md-1'></div> -->
