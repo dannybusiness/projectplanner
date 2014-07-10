@@ -8,6 +8,7 @@ class ProjectsController < ApplicationController
   end
 
   def new
+    @project = Project.new
   end
 
   def edit
@@ -19,11 +20,13 @@ class ProjectsController < ApplicationController
 
     if @project.update!(project_params)
       redirect_to @project, notice: 'Project was successfully created.'
+    else
+      redirect_to @project, notice: 'Unable to update project'
     end
   end
 
   def create
-  	@project = Project.new(project_params)
+  	@project = Project.new
 
     respond_to do |format|
       if @project.save
