@@ -6,6 +6,7 @@ require 'rails_helper'
 
 describe Project do
 	it 'is invalid without a name' do 
+		expect(FactoryGirl.build(:project, name: nil)).to_not be_valid
 	end
 	it 'is invalid without a planning start date'
 	it 'is invalid without a planning end date'
