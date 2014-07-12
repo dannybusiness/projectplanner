@@ -34,6 +34,8 @@ end
 
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'devise'
+gem 'rspec-rails'
+gem 'factory_girl_rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
