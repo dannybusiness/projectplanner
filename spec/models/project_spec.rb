@@ -20,7 +20,14 @@ describe Project do
 	it 'is invalid without an implementation end date' do
 		expect(FactoryGirl.build(:project, implementation_end_date: nil)).to_not be_valid
 	end
-	it 'is invalid with improperly ordered start and end dates ' do
+	it 'is invalid with improperly ordered implementation dates' do
+		expect(FactoryGirl.build(:project, implementation_start_date: '5/11/2014')).to_not be_valid
+	end
+	it 'is invalid with improperly ordered planning_end_dates and implementation_start_date' do
+		expect(FactoryGirl.build(:project, planning_end_date: '2/11/2014')).to_not be_valid
+	end
+	it 'is invalid with improperly ordered planning dates' do
 		expect(FactoryGirl.build(:project, planning_start_date: '31/12/2014')).to_not be_valid
 	end
+	
 end

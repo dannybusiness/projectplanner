@@ -34,6 +34,7 @@ end
 
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'devise'
+gem 'validates_timeliness'
 
 group :development, :test do
 	gem 'rspec-rails'

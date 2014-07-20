@@ -26,14 +26,14 @@ class ProjectsController < ApplicationController
   end
 
   def create
-  	@project = Project.new
+  	@project = Project.new(project_params)
 
     respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
         format.json { render action: 'show', status: :created, location: @project }
       else
-        format.html { render action: 'new' }
+        format.html { render :new }
         format.json { render json: @project.errors, status: :unprocessable_entity }
       end
     end

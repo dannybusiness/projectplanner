@@ -13,10 +13,10 @@
     <div class='container-fluid'>
       <div class='row'>
         <div class='col-md-8'>
-          <h3>Project Planner</h3>
+          <a href='<%= projects_path%>'> <h3>Project Planner</h3> </a>
         </div>
         <div class='col-md-4'>
-          <div id = 'user'>
+          <div id ='user'>
               <% if current_user %>
                 <%= current_user.email %> | <%= button_to 'Sign Out', destroy_user_session_path, method: 'delete', class: 'btn btn-danger'%>
               <% else %>
